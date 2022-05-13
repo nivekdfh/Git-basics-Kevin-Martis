@@ -1,0 +1,65 @@
+body{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  grid-template-areas: 
+  		"header"
+        "ad1"
+        "ad2"
+        "ad3"
+        "foot"; 
+}
+
+.header{
+  grid-area: header;
+}
+.ad1 {
+  grid-area: ad1;
+}
+.ad2 {
+  grid-area: ad2;
+}
+.foot {
+  grid-area: foot;
+  
+}
+
+
+@media only screen and (min-width: 376px){
+  body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+    	"header"
+        "ad1"
+        "ad2"
+        "foot"; 
+	}
+}
+
+@media only screen and (min-width: 740px){
+ body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+        "header header"
+        "ad1 ad2"
+        "foot foot"; 
+	}
+}
+@media only screen and (min-width: 1024px){
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+        "header header header header"
+        "ad2 emty ad1 ad1"
+        "foot foot foot foot";  
+	}
+}
